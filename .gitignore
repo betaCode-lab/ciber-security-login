@@ -1,0 +1,4 @@
+node_modules/
+postcss.config.cjs
+tailwind.config.cjs
+public/css/tailwind.css
