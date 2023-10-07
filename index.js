@@ -22,11 +22,13 @@ app.use(cookieParser());
 // Static Files
 app.use(express.static('public'));
 
+
 // Establish database connection
 dbConnection();
 
 // Routing
 app.get('/', (req, res) => res.redirect('/auth/login'));
+
 app.use(userRoutes);
 app.use(homeRoutes);
 

@@ -34,7 +34,7 @@ const login = async (req, res) => {
 
     return res.cookie('_token', token, {
         httpOnly: true
-    }).redirect('/home/terms');
+    }).redirect('/home/terms#modal');
 }
 
 // Get the form signup page

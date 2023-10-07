@@ -1,9 +1,41 @@
 extends ../layout/index
+
 block content
+    h1(class="text-center font-bold text-blue-800 py-5") Bienvenido al Banco BBVA
 
 
-    form(action="/auth/logout", method="get") 
-        button(type="submit" class="bg-blue-800 cursor-pointer rounded py-2 px-3 text-white font-bold") Log Out
-    
-    
-    //- Write your HTML here
+    a(href="#modal") 
+
+    div(id="modal" class="modal-container py-20")
+        div(class="modal-content py-4 px-6")
+            h2(class="text-2xl font-bold mb-4 text-blue-800") Términos y Condiciones
+
+            p(class="mb-2 text-gray-700") AVISO DE PRIVACIDAD
+            p(class="mb-2") El presente aviso de privacidad se emite en cumplimiento de la Ley Federal de Protección de Datos Personales en Posesión de Particulares (la "Ley") en México.
+        
+            p(class="mb-2 font-bold") Responsable de los Datos Personales:
+            p(class="ml-4 mb-2") Nombre del banco: BBVA México
+            p(class="ml-4 mb-2") Nombre del Usuario: 
+
+            p(class="mb-2 font-bold") Finalidad del Tratamiento de Datos Personales:
+            ul(class="list-disc ml-4 mb-2")
+                li 1.Proveer los servicios bancarios ofrecidos por BBVA México, incluyendo la apertura y mantenimiento de cuentas, gestión de transacciones y servicios financieros.
+                li 2.Verificar y autenticar la identidad de los usuarios, así como prevenir el fraude y el lavado de dinero, de acuerdo con las leyes y regulaciones aplicables.
+                li 3.Contactar a los titulares de las cuentas para asuntos relacionados con su cuenta, transacciones y servicios, incluyendo notificaciones importantes y actualizaciones de seguridad.
+                li 4.Cumplir con las obligaciones legales y regulatorias aplicables, incluyendo reportes ante autoridades financieras y tributarias.
+                li 5.Realizar análisis estadísticos y de mercado con el fin de mejorar nuestros servicios y personalizar nuestras ofertas para los usuarios.
+                li 6.Enviar información promocional, publicitaria y de marketing sobre productos y servicios financieros de BBVA México, siempre y cuando se cuente con el consentimiento del titular de los datos.
+            p(class="mb-2 font-bold") Medios para Ejercer los Derechos ARCO:
+            ul(class="list-disc ml-4 mb-2")
+                li Los titulares de los datos personales tienen derecho a acceder, rectificar, cancelar u oponerse al tratamiento de sus datos personales. Para ejercer estos derechos, por favor comuníquese con nuestro departamento de atención al cliente a través del correo electrónico [correo electrónico de contacto] o al teléfono [teléfono de contacto]. Adicionalmente, puede presentar una solicitud por escrito en nuestras oficinas.
+            p(class="mb-2 font-bold") Protección de Datos Personales:
+            ul(class="list-disc ml-4 mb-2")
+                li Hemos implementado medidas de seguridad físicas, técnicas y administrativas para proteger los datos personales en nuestra posesión, y cumplir con la Ley y las regulaciones aplicables en México. Esto incluye la encriptación de datos, el acceso limitado a la información, y capacitación continua a nuestro personal sobre seguridad de datos.
+            p(class="mb-2 font-bold") Cambios al Aviso de Privacidad:
+            ul(class="list-disc ml-4 mb-2")
+                li Nos reservamos el derecho de realizar modificaciones o actualizaciones a este aviso de privacidad en cualquier momento. Las modificaciones serán publicadas en nuestro sitio web [URL del sitio web] y, en su caso, se enviarán notificaciones a los titulares de datos afectados.
+            a(href="#" class="bg-green-400 font-bold cursor-pointer rounded  py-2 px-3 text-white") Aceptar
+            div(class="py-3")
+            a(type="submit" href = "/auth/logout" class="bg-orange-400 cursor-pointer rounded py-2 px-3 text-white font-bold") No Acepto
+
+    a(type="submit" href = "/auth/logout" class="bg-blue-800 cursor-pointer rounded py-2 px-3 text-white font-bold") Log Out
